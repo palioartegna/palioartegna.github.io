@@ -44,20 +44,25 @@
             @for (game of games; track game) {
               <div class=" w-full rounded-2xl p-5"
                    (click)="checkbox.checked = !checkbox.checked"
-                   [style]="{'background-image': 'linear-gradient(to right, ' + colors[Leaderboard.fromScores(gameScores[game]).getWinner().player]  + ', transparent 95%'} "
+                   [style]="{'background-image': 'linear-gradient(to right, ' + colors[Leaderboard.fromScores(gameScores[game]).getWinner().player]  + ', transparent 99%'} "
               >
                 <input type="checkbox" class="hidden" #checkbox>
+                <span class="flex justify-between">
+
                 {{ game }}
-                @if (checkbox.checked) {
-                  <div class="flex justify-between w-full">
-                    @for (participant of Leaderboard.fromScores(gameScores[game]).getSortedParticipants(); track participant; let index = $index) {
-                      <div class="flex flex-col items-center justify-center">
-                        <span>{{ index + 1 }}°</span>
-                        <span>{{ participant.player }}</span>
-                      </div>
-                    }
-                  </div>
-                }
+                  <span class="material-icons-outlined">keyboard_arrow_down</span>
+
+                </span>
+                <div class="flex items-end transition-all duration-200  justify-between w-full mt-1 overflow-hidden"
+                     [class]="{'h-0': !checkbox.checked, 'h-16': checkbox.checked}"
+                >
+                  @for (participant of Leaderboard.fromScores(gameScores[game]).getSortedParticipants(); track participant; let index = $index) {
+                    <div class="flex flex-col items-center justify-center">
+                      <span>{{ index + 1 }}°</span>
+                      <span>{{ participant.player }}</span>
+                    </div>
+                  }
+                </div>
               </div>
             }
 

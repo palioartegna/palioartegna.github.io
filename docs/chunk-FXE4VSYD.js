@@ -21,6 +21,7 @@ import {
   ɵɵpipeBind1,
   ɵɵproperty,
   ɵɵpureFunction1,
+  ɵɵpureFunction2,
   ɵɵpureFunction3,
   ɵɵreference,
   ɵɵrepeater,
@@ -336,7 +337,7 @@ var _SingleLeaderboardComponent = class _SingleLeaderboardComponent {
 _SingleLeaderboardComponent.\u0275fac = function SingleLeaderboardComponent_Factory(t) {
   return new (t || _SingleLeaderboardComponent)();
 };
-_SingleLeaderboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _SingleLeaderboardComponent, selectors: [["single-leaderboard"]], inputs: { leaderboard: "leaderboard" }, decls: 10, vars: 2, consts: [[1, "w-full", "h-full", "flex-col", "flex", "gap-5"], [1, "relative", "w-full", "h-1/3", "min-h-64", "flex", "justify-around", "items-end", "px-4"], [1, "absolute", "z-10", "overflow-scroll", "h-full", "w-full"], [1, "rounded-2xl", "pt-2", "mt-[80%]", "h-5/6", "overflow-hidden", "backdrop-blur", "drop-shadow-2xl", "w-full", "bg-white/30", "flex", "flex-col", "justify-start", "items-center"], [1, "w-1/5", "border-4", "border-gray-500", "rounded-2xl", "mb-2"], [1, "w-3/12", "h-full", "flex", "flex-col", "justify-end", "items-center"], [1, "font-bold", "text-xl"], [1, "text-center", "font-bold", "text-4xl", "flex", "justify-center", "items-center", "bg-gray-500/30", "w-full", "backdrop-blur", "rounded-3xl"], [1, "flex", "p-3", "pb-5", "gap-4", "w-full"], [1, "w-1/12", "flex", "items-center", "text-3xl"], [1, "w-2/12", "text-2xl", "font-bold", "flex", "flex-col", "justify-center"], [1, ""], [1, "flex", "items-center", "justify-end", "grow", "gap-2"], ["class", "h-4 aspect-square", "src", "assets/images/joker-hat-svgrepo-com.svg"], [1, "text-xl", "flex", "items-center"], ["src", "assets/images/joker-hat-svgrepo-com.svg", 1, "h-4", "aspect-square"], ["class", "w-3/12 h-full flex flex-col justify-end items-center"], ["class", "flex  p-3 pb-5 gap-4 w-full ", 3, "style"]], template: function SingleLeaderboardComponent_Template(rf, ctx) {
+_SingleLeaderboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _SingleLeaderboardComponent, selectors: [["single-leaderboard"]], inputs: { leaderboard: "leaderboard" }, decls: 10, vars: 2, consts: [[1, "w-full", "h-full", "flex-col", "flex", "gap-5"], [1, "relative", "w-full", "h-1/3", "min-h-64", "flex", "justify-around", "items-end", "px-4"], [1, "absolute", "z-10", "overflow-scroll", "h-full", "w-full"], [1, "relative", "rounded-2xl", "mt-[80%]", "h-5/6", "overflow-hidden", "backdrop-blur", "drop-shadow-2xl", "w-full", "bg-white/30", "flex", "flex-col", "justify-start", "items-center"], [1, "w-1/5", "absolute", "top-2", "border-4", "border-gray-500", "rounded-2xl", "mb-2"], [1, "w-3/12", "h-full", "flex", "flex-col", "justify-end", "items-center"], [1, "font-bold", "text-xl"], [1, "text-center", "font-bold", "text-4xl", "flex", "justify-center", "items-center", "bg-gray-500/30", "w-full", "backdrop-blur", "rounded-3xl"], [1, "flex", "p-3", "pb-5", "gap-4", "h-1/6", "w-full"], [1, "w-1/12", "flex", "items-center", "text-3xl"], [1, "w-2/12", "text-2xl", "font-bold", "flex", "flex-col", "justify-center"], [1, ""], [1, "flex", "items-center", "justify-end", "grow", "gap-2"], ["class", "h-4 aspect-square", "src", "assets/images/joker-hat-svgrepo-com.svg"], [1, "text-xl", "flex", "items-center"], ["src", "assets/images/joker-hat-svgrepo-com.svg", 1, "h-4", "aspect-square"], ["class", "w-3/12 h-full flex flex-col justify-end items-center"], ["class", "flex  p-3 pb-5 gap-4 h-1/6 w-full ", 3, "style"]], template: function SingleLeaderboardComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0)(1, "div", 1);
     \u0275\u0275repeaterCreate(2, SingleLeaderboardComponent_For_3_Template, 5, 8, "div", 16, \u0275\u0275repeaterTrackByIdentity);
@@ -369,9 +370,9 @@ function LeaderboardsComponent_Conditional_16_Template(rf, ctx) {
     \u0275\u0275property("leaderboard", ctx_r0.selectedLeaderboard);
   }
 }
-function LeaderboardsComponent_Conditional_17_For_2_Conditional_4_For_2_Template(rf, ctx) {
+function LeaderboardsComponent_Conditional_17_For_2_For_9_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 20)(1, "span");
+    \u0275\u0275elementStart(0, "div", 21)(1, "span");
     \u0275\u0275text(2);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(3, "span");
@@ -379,57 +380,52 @@ function LeaderboardsComponent_Conditional_17_For_2_Conditional_4_For_2_Template
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
-    const participant_r11 = ctx.$implicit;
-    const index_r12 = ctx.$index;
+    const participant_r10 = ctx.$implicit;
+    const index_r11 = ctx.$index;
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1("", index_r12 + 1, "\xB0");
+    \u0275\u0275textInterpolate1("", index_r11 + 1, "\xB0");
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(participant_r11.player);
-  }
-}
-function LeaderboardsComponent_Conditional_17_For_2_Conditional_4_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19);
-    \u0275\u0275repeaterCreate(1, LeaderboardsComponent_Conditional_17_For_2_Conditional_4_For_2_Template, 5, 2, "div", 21, \u0275\u0275repeaterTrackByIdentity);
-    \u0275\u0275elementEnd();
-  }
-  if (rf & 2) {
-    const game_r3 = \u0275\u0275nextContext().$implicit;
-    const ctx_r9 = \u0275\u0275nextContext(2);
-    \u0275\u0275advance();
-    \u0275\u0275repeater(ctx_r9.Leaderboard.fromScores(ctx_r9.gameScores[game_r3]).getSortedParticipants());
+    \u0275\u0275textInterpolate(participant_r10.player);
   }
 }
 var _c02 = (a0) => ({ "background-image": a0 });
+var _c12 = (a0, a1) => ({ "h-0": a0, "h-16": a1 });
 function LeaderboardsComponent_Conditional_17_For_2_Template(rf, ctx) {
   if (rf & 1) {
-    const _r18 = \u0275\u0275getCurrentView();
+    const _r16 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 15);
     \u0275\u0275listener("click", function LeaderboardsComponent_Conditional_17_For_2_Template_div_click_0_listener() {
-      \u0275\u0275restoreView(_r18);
+      \u0275\u0275restoreView(_r16);
       const _r8 = \u0275\u0275reference(2);
       return \u0275\u0275resetView(_r8.checked = !_r8.checked);
     });
     \u0275\u0275element(1, "input", 16, 17);
-    \u0275\u0275text(3);
-    \u0275\u0275template(4, LeaderboardsComponent_Conditional_17_For_2_Conditional_4_Template, 3, 0, "div", 18);
-    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "span", 18);
+    \u0275\u0275text(4);
+    \u0275\u0275elementStart(5, "span", 19);
+    \u0275\u0275text(6, "keyboard_arrow_down");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(7, "div", 20);
+    \u0275\u0275repeaterCreate(8, LeaderboardsComponent_Conditional_17_For_2_For_9_Template, 5, 2, "div", 22, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     const game_r3 = ctx.$implicit;
     const _r8 = \u0275\u0275reference(2);
     const ctx_r2 = \u0275\u0275nextContext(2);
-    \u0275\u0275styleMap(\u0275\u0275pureFunction1(4, _c02, "linear-gradient(to right, " + ctx_r2.colors[ctx_r2.Leaderboard.fromScores(ctx_r2.gameScores[game_r3]).getWinner().player] + ", transparent 95%"));
-    \u0275\u0275advance(3);
+    \u0275\u0275styleMap(\u0275\u0275pureFunction1(5, _c02, "linear-gradient(to right, " + ctx_r2.colors[ctx_r2.Leaderboard.fromScores(ctx_r2.gameScores[game_r3]).getWinner().player] + ", transparent 99%"));
+    \u0275\u0275advance(4);
     \u0275\u0275textInterpolate1(" ", game_r3, " ");
+    \u0275\u0275advance(3);
+    \u0275\u0275classMap(\u0275\u0275pureFunction2(7, _c12, !_r8.checked, _r8.checked));
     \u0275\u0275advance();
-    \u0275\u0275conditional(4, _r8.checked ? 4 : -1);
+    \u0275\u0275repeater(ctx_r2.Leaderboard.fromScores(ctx_r2.gameScores[game_r3]).getSortedParticipants());
   }
 }
 function LeaderboardsComponent_Conditional_17_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 14);
-    \u0275\u0275repeaterCreate(1, LeaderboardsComponent_Conditional_17_For_2_Template, 5, 6, "div", 22, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275repeaterCreate(1, LeaderboardsComponent_Conditional_17_For_2_Template, 10, 10, "div", 23, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -438,7 +434,7 @@ function LeaderboardsComponent_Conditional_17_Template(rf, ctx) {
     \u0275\u0275repeater(ctx_r1.games);
   }
 }
-var _c12 = (a0) => ({ "bg-gray-50/80": a0 });
+var _c2 = (a0) => ({ "bg-gray-50/80": a0 });
 var colors2 = {
   "Salt": "rgba(0,60,255,0.50)",
   "Sotcjiscjel": "rgba(255,221,0,0.50)",
@@ -467,7 +463,7 @@ var _LeaderboardsComponent = class _LeaderboardsComponent {
 _LeaderboardsComponent.\u0275fac = function LeaderboardsComponent_Factory(t) {
   return new (t || _LeaderboardsComponent)();
 };
-_LeaderboardsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LeaderboardsComponent, selectors: [["app-leaderboard"]], decls: 18, vars: 9, consts: [[1, "bg-gray-700", "-z-10", "fixed", "inset-0", "w-full", "h-full"], [1, "flex", "w-full", "h-full", "shrink-0", "items-center", "justify-center"], [1, "relative", "md:max-h-[800px]", "md:max-w-[390px]", "w-full", "h-full"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-36"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-60"], [1, "max-md:hidden", "absolute", "rounded-r", "bg-black", "w-1.5", "h-28", "-right-1.5", "top-44"], [1, "relative", "md:pt-5", "bg-white", "md:border-[9px]", "md:border-black", "md:rounded-[50px]", "overflow-hidden", "w-full", "h-full"], ["src", "assets/images/Sfondo.jpg", 1, "absolute", "w-full", "h-full", "top-0", "left-0", "object-cover", "opacity-55"], [1, "w-full", "relative", "h-full", "overflow-hidden", "flex", "flex-col", "items-center", "gap-5"], [1, "text-3xl", "font-bold", "p-2"], [1, "relative", "flex", "w-1/2", "border", "border-gray-50", "rounded-2xl", "p-0.5"], [1, "w-1/2", "duration-300", "transition-all", "text-center", "h-full", "rounded-2xl", 3, "click"], ["class", "w-full h-full", 3, "leaderboard"], [1, "w-full", "h-full", 3, "leaderboard"], [1, "flex-col", "flex", "gap-1", "w-full", "overflow-scroll"], [1, "w-full", "rounded-2xl", "p-5", 3, "click"], ["type", "checkbox", 1, "hidden"], ["checkbox", ""], ["class", "flex justify-between w-full"], [1, "flex", "justify-between", "w-full"], [1, "flex", "flex-col", "items-center", "justify-center"], ["class", "flex flex-col items-center justify-center"], ["class", " w-full rounded-2xl p-5", 3, "style"]], template: function LeaderboardsComponent_Template(rf, ctx) {
+_LeaderboardsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LeaderboardsComponent, selectors: [["app-leaderboard"]], decls: 18, vars: 9, consts: [[1, "bg-gray-700", "-z-10", "fixed", "inset-0", "w-full", "h-full"], [1, "flex", "w-full", "h-full", "shrink-0", "items-center", "justify-center"], [1, "relative", "md:max-h-[800px]", "md:max-w-[390px]", "w-full", "h-full"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-36"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-60"], [1, "max-md:hidden", "absolute", "rounded-r", "bg-black", "w-1.5", "h-28", "-right-1.5", "top-44"], [1, "relative", "md:pt-5", "bg-white", "md:border-[9px]", "md:border-black", "md:rounded-[50px]", "overflow-hidden", "w-full", "h-full"], ["src", "assets/images/Sfondo.jpg", 1, "absolute", "w-full", "h-full", "top-0", "left-0", "object-cover", "opacity-55"], [1, "w-full", "relative", "h-full", "overflow-hidden", "flex", "flex-col", "items-center", "gap-5"], [1, "text-3xl", "font-bold", "p-2"], [1, "relative", "flex", "w-1/2", "border", "border-gray-50", "rounded-2xl", "p-0.5"], [1, "w-1/2", "duration-300", "transition-all", "text-center", "h-full", "rounded-2xl", 3, "click"], ["class", "w-full h-full", 3, "leaderboard"], [1, "w-full", "h-full", 3, "leaderboard"], [1, "flex-col", "flex", "gap-1", "w-full", "overflow-scroll"], [1, "w-full", "rounded-2xl", "p-5", 3, "click"], ["type", "checkbox", 1, "hidden"], ["checkbox", ""], [1, "flex", "justify-between"], [1, "material-icons-outlined"], [1, "flex", "items-end", "transition-all", "duration-200", "justify-between", "w-full", "mt-1", "overflow-hidden"], [1, "flex", "flex-col", "items-center", "justify-center"], ["class", "flex flex-col items-center justify-center"], ["class", " w-full rounded-2xl p-5", 3, "style"]], template: function LeaderboardsComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275element(0, "div", 0);
     \u0275\u0275elementStart(1, "div", 1)(2, "div", 2);
@@ -494,9 +490,9 @@ _LeaderboardsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
   }
   if (rf & 2) {
     \u0275\u0275advance(12);
-    \u0275\u0275classMap(\u0275\u0275pureFunction1(5, _c12, ctx.selectedLeaderboard));
+    \u0275\u0275classMap(\u0275\u0275pureFunction1(5, _c2, ctx.selectedLeaderboard));
     \u0275\u0275advance(2);
-    \u0275\u0275classMap(\u0275\u0275pureFunction1(7, _c12, !ctx.selectedLeaderboard));
+    \u0275\u0275classMap(\u0275\u0275pureFunction1(7, _c2, !ctx.selectedLeaderboard));
     \u0275\u0275advance(2);
     \u0275\u0275conditional(16, ctx.selectedLeaderboard ? 16 : 17);
   }
@@ -540,4 +536,4 @@ export {
   WebsiteRoutingModule,
   routes
 };
-//# sourceMappingURL=chunk-4ZGRAT6Q.js.map
+//# sourceMappingURL=chunk-FXE4VSYD.js.map

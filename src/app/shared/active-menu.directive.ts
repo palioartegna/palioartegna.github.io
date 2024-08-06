@@ -3,6 +3,7 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Directive({
   selector: '[pbActiveMenu]',
+  standalone: true
 })
 export class ActiveMenuDirective implements OnInit {
   @Input() pbActiveMenu?: string;

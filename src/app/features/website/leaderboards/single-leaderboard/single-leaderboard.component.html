@@ -23,18 +23,18 @@
 
   </div>
   <div class="absolute z-10 overflow-scroll h-full w-full">
-    <div class="rounded-2xl pt-2 mt-[80%] h-5/6 overflow-hidden  backdrop-blur
+    <div class=" relative rounded-2xl  mt-[80%] h-5/6  overflow-hidden  backdrop-blur
     drop-shadow-2xl
     w-full bg-white/30 flex flex-col justify-start items-center">
       <div
-        class="w-1/5 border-4 border-gray-500 rounded-2xl mb-2 "
+        class="w-1/5 absolute top-2 border-4 border-gray-500 rounded-2xl mb-2 "
       >
       </div>
       @for (participant of leaderboard.participants | decorateParticipants; track participant) {
         <div
           [style]="{'background-image': 'linear-gradient(to right, ' + colors[participant.player] + ', transparent 80%'} "
 
-          class="flex  p-3 pb-5 gap-4 w-full "
+          class="flex  p-3 pb-5 gap-4 h-1/6 w-full "
         >
           <span class="w-1/12 flex items-center  text-3xl"> {{ participant.rank }}</span>
           <div class=" w-2/12 text-2xl font-bold flex flex-col justify-center">
