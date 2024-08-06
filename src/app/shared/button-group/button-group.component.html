@@ -1,0 +1,10 @@
+<div class="flex divide-x overflow-hidden rounded-full border bg-white">
+  <button
+    (click)="selected = button"
+    *ngFor="let button of buttons"
+    [attr.data-selected]="selected == button"
+    class="px-4 py-2 text-sm font-medium text-gray-600 transition-colors duration-200 hover:bg-gray-100 data-[selected=true]:bg-gray-100 sm:px-6 sm:text-base"
+  >
+    {{ transform.callbackFn(button) }}
+  </button>
+</div>

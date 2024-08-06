@@ -1,0 +1,10 @@
+<div class="grid auto-cols-fr grid-flow-col justify-around">
+  <div
+    (click)="activeTab = i"
+    *ngFor="let tab of tabs; let i = index"
+    [attr.data-active]="i == activeTab"
+    class="data-[active=true]:bg-primary_50 hover:data-[active=true]:border-primary_500 data-[active=true]:border-primary_500 flex items-center justify-center border-b p-3 hover:border-b-2 hover:border-slate-400 hover:bg-slate-100 hover:font-bold data-[active=true]:border-b-2 data-[active=true]:font-bold"
+  >
+    {{ tab }}
+  </div>
+</div>

@@ -1,0 +1,184 @@
+{
+  "global": [
+    {
+      "player": "Salt",
+      "points": 61,
+      "jolly": true
+    },
+    {
+      "player": "Sotcjiscjel",
+      "points": 42,
+      "jolly": true
+    },
+    {
+      "player": "Vile",
+      "points": 33
+    },
+    {
+      "player": "Somont",
+      "points": 31
+    },
+    {
+      "player": "Surnins",
+      "points": 30
+    }
+  ],
+  "game-scores": {
+    "Taglio del Ceppo Maschile": [
+      {
+        "player": "Sotcjiscjel",
+        "points": 5
+      },
+      {
+        "player": "Somont",
+        "points": 7
+      },
+      {
+        "player": "Salt",
+        "points": 10,
+        "jolly": true
+      },
+      {
+        "player": "Vile",
+        "points": 3
+      },
+      {
+        "player": "Surnins",
+        "points": 1
+      }
+    ],
+    "Taglio del Ceppo Femminile": [
+      {
+        "player": "Sotcjiscjel",
+        "points": 5,
+        "jolly": true
+      },
+      {
+        "player": "Somont",
+        "points": 7
+      },
+      {
+        "player": "Salt",
+        "points": 10
+      },
+      {
+        "player": "Vile",
+        "points": 3
+      },
+      {
+        "player": "Surnins",
+        "points": 1
+      }
+    ],
+    "Corsa coi Sacchi": [
+      {
+        "player": "Surnins",
+        "points": 10
+      },
+      {
+        "player": "Salt",
+        "points": 7
+      },
+      {
+        "player": "Sotcjiscjel",
+        "points": 5
+      },
+      {
+        "player": "Vile",
+        "points": 3
+      },
+      {
+        "player": "Somont",
+        "points": 1
+      }
+    ],
+    "Strade Mate": [
+      {
+        "player": "Vile",
+        "points": 10
+      },
+      {
+        "player": "Salt",
+        "points": 7
+      },
+      {
+        "player": "Surnins",
+        "points": 5
+      },
+      {
+        "player": "Somont",
+        "points": 3
+      },
+      {
+        "player": "Sotcjiscjel",
+        "points": 1
+      }
+    ],
+    "Staffetta": [
+      {
+        "player": "Sotcjiscjel",
+        "points": 10
+      },
+      {
+        "player": "Surnins",
+        "points": 7
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Vile",
+        "points": 3
+      },
+      {
+        "player": "Somont",
+        "points": 1
+      }
+    ],
+    "Cibbè": [
+      {
+        "player": "Vile",
+        "points": 10
+      },
+      {
+        "player": "Salt",
+        "points": 7
+      },
+      {
+        "player": "Somont",
+        "points": 5
+      },
+      {
+        "player": "Surnins",
+        "points": 3
+      },
+      {
+        "player": "Sotcjiscjel",
+        "points": 1
+      }
+    ],
+    "Bocce": [
+      {
+        "player": "Sotcjiscjel",
+        "points": 10
+      },
+      {
+        "player": "Somont",
+        "points": 7
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Surnins",
+        "points": 3
+      },
+      {
+        "player": "Vile",
+        "points": 1
+      }
+    ]
+  }
+}

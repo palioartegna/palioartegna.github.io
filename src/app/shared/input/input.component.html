@@ -1,0 +1,38 @@
+<!-- pb-input.component.html -->
+<div class="relative flex w-full items-center">
+   <div #prefix class="absolute left-[15px]">
+      <ng-content select="prefix"></ng-content>
+   </div>
+
+   <textarea
+      *ngIf="inputType === 'textarea'"
+      [(ngModel)]="value"
+      [ngClass]="{ 'pb-2.5 pt-5': label, 'py-3': !label }"
+      [style.padding-left]="15 + 2 + 5 + prefix.offsetWidth + 'px'"
+      [style.padding-right]="15 + 2 + 5 + suffix.offsetWidth + 'px'"
+      class="h-40 w-full appearance-none overflow-scroll rounded-2xl border px-3 py-2 leading-tight text-gray-600 focus:outline-none"
+      placeholder="{{ placeholder }}"
+   ></textarea>
+
+   <input
+      *ngIf="inputType !== 'textarea'"
+      [(ngModel)]="value"
+      [ngClass]="{ 'pb-2.5 pt-5': label, 'py-3': !label }"
+      [style.padding-left]="15 + 2 + 5 + prefix.offsetWidth + 'px'"
+      [style.padding-right]="15 + 2 + 5 + suffix.offsetWidth + 'px'"
+      class="h-12 w-full appearance-none overflow-scroll rounded-2xl border px-3 py-2 leading-tight text-gray-600 focus:outline-none"
+      placeholder="{{ placeholder }}"
+      [disabled]="disabled"
+      type="text"
+   />
+
+   <label
+      *ngIf="label"
+      class="peer-focus:text-primary_500 absolute left-3 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75"
+      >{{ label }}
+   </label>
+
+   <div #suffix class="absolute right-[15px]">
+      <ng-content select="suffix"></ng-content>
+   </div>
+</div>

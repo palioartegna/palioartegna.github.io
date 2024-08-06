@@ -1,0 +1,9 @@
+<div
+   class="animate-duration-200 animate-fade-left relative w-96 rounded-lg p-5 shadow-lg duration-200"
+   [class.bg-green-200]="toast.type === 'success'"
+   [class.bg-red-200]="toast.type === 'error'"
+>
+   <span class="text-2xl">{{ toast.title }}</span
+   ><br />
+   <span class="">{{ toast.message }}</span>
+</div>

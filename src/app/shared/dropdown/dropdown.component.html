@@ -1,0 +1,22 @@
+<!-- The main div containing the dropdown -->
+<div class="relative">
+  <!-- The div containing the selected value and an icon to visually indicate if the dropdown is open or closed -->
+  <div
+    (click)="focused = !focused"
+    class="border-1 relative flex w-fit cursor-pointer items-center justify-center rounded-md border border-neutral-400 px-4 py-2"
+  >
+    <div class="mr-2">The Selected Value</div>
+    <div>
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+  </div>
+  <!-- The div containing the available items -->
+  <div *ngIf="focused" class="border-1 absolute z-10 mt-2 w-fit cursor-pointer rounded-md border border-neutral-400 bg-white py-1">
+    <div class="w-full px-4 py-2 hover:bg-neutral-100">Item 1</div>
+    <div class="w-full px-4 py-2 hover:bg-neutral-100">Item 2</div>
+    <div class="w-full px-4 py-2 hover:bg-neutral-100">Item 3</div>
+    <div class="w-full px-4 py-2 hover:bg-neutral-100">Item 4</div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div (click)="isOpen = !isOpen" class="flex items-center justify-center">
+  <div (click)="decrementIndex()">
+    <ng-content select="[leftArrow]"></ng-content>
+  </div>
+  <ng-template #content>
+    <ng-content class="static"></ng-content>
+  </ng-template>
+  <ng-container #instantiatedComponent pbHost></ng-container>
+  <div (click)="incrementIndex()">
+    <ng-content select="[rightArrow]"></ng-content>
+  </div>
+</div>

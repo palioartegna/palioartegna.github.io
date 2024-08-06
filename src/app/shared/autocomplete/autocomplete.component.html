@@ -1,0 +1,49 @@
+<div (keydown.escape)="inputFocus = false; $event.stopPropagation()" class="relative m-0.5 w-full">
+   <div class="relative flex w-full items-center">
+      <div #prefix class="absolute left-[15px]">
+         <ng-content select="prefix"></ng-content>
+      </div>
+      <input
+         #input
+         [disabled]="disabled"
+         (focusin)="inputFocus = true"
+         [(ngModel)]="term"
+         [ngClass]="{ 'pb-2.5 pt-5': label, 'py-3': !label }"
+         [style.padding-left]="15 + 2 + 5 + prefix.offsetWidth + 'px'"
+         [style.padding-right]="15 + 2 + 5 + suffix.offsetWidth + 'px'"
+         class="focus:shadow-outline h-11 w-full appearance-none rounded-2xl border px-3 py-2 leading-tight text-gray-600 shadow focus:outline-none"
+         id="autocomplete_label"
+         placeholder="{{ placeholder }}"
+         type="text"
+      />
+      <label
+         (click)="triggerClick()"
+         *ngIf="label"
+         [style.padding-left]="5 + 2 + prefix.offsetWidth + 'px'"
+         [style.padding-right]="5 + 2 + suffix.offsetWidth + 'px'"
+         class="peer-focus:text-primary_500 absolute left-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75"
+         for="autocomplete_label"
+      >
+         {{ label }}
+      </label>
+
+      <div #suffix class="absolute right-[15px]">
+         <ng-content select="suffix"></ng-content>
+      </div>
+   </div>
+
+   <div
+      *ngIf="!disabled && inputFocus && items && items!.length > 0"
+      [style.height]="(items.length < 4 ? items.length : 4) * input.offsetHeight + 'px'"
+      class="bg-base-100 absolute z-10 mt-1 h-40 w-full divide-y overflow-scroll rounded-3xl bg-white shadow"
+   >
+      <div (click)="selectItem(item); inputFocus = false" *ngFor="let item of items" [style.height.px]="input.offsetHeight">
+         <div
+            [class.bg-slate-300]="item === selected"
+            class="flex h-full w-full flex-col items-start justify-center p-1 hover:bg-slate-200"
+         >
+            <a class="text-lg">{{ transformItems.callbackFn(item) }}</a>
+         </div>
+      </div>
+   </div>
+</div>

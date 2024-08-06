@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'material-icons/iconfont/material-icons.css';
+
+::-webkit-scrollbar {
+  display: none;
+}
+html, body {
+  font-family: 'MuseoModerno', sans-serif;
+}
+* {
+  font-family: 'MuseoModerno', sans-serif;
+}
+
+@font-face {
+  font-family: 'MuseoModerno'; /* Define the font family name */
+  src: url('assets/fonts/MuseoModerno-VariableFont_wght.ttf') format('truetype'); /* Specify the path and format */
+  font-weight: normal; /* You can specify the weight if known */
+  font-style: normal; /* Specify the style */
+}

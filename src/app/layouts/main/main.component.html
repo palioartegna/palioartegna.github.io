@@ -1,0 +1,34 @@
+<div class="flex w-full duration-500 h-screen">
+  <div *ngIf="sideNavService.component"
+       class="relative transition-all
+       ease-in-out duration-300 z-10 h-full max-w-96"
+       [style]="!sideNavService.enabled ? 'width: 0px': 'width:90%;'"
+  >
+    <div
+      [class.opacity-0]="!sideNavService.enabled"
+      [class.opacity-100]="sideNavService.enabled"
+      class="backdrop-blur transition-all duration-300 ease-in-out absolute -z-100 h-full w-full"
+    ></div>
+    <ng-container *ngComponentOutlet="
+          sideNavService.component;
+      "/>
+
+  </div>
+
+  <div class="fixed flex w-full h-full flex-col">
+    <div *ngIf="navbarService.component">
+      <ng-container *ngComponentOutlet="
+          navbarService.component;
+      "/>
+    </div>
+
+
+    <div class="overflow-scroll h-full w-full">
+      <router-outlet></router-outlet>
+    </div>
+    <!--    <ng-container #footerContainerRef class="grow-0" pbHost></ng-container>-->
+  </div>
+</div>
+<div class="fixed right-1 top-1 z-[1000] flex flex-col gap-1">
+  <pb-toast [toast]="toast" (close)="toastService.removeToast($event)" *ngFor="let toast of toasts"></pb-toast>
+</div>

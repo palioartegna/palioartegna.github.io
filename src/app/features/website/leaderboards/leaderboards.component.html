@@ -1,0 +1,75 @@
+<div class="bg-gray-700 -z-10 fixed inset-0 w-full h-full">
+
+</div>
+
+
+<div class="flex w-full h-full shrink-0 items-center justify-center">
+
+  <div class="relative md:max-h-[800px] md:max-w-[390px]  w-full h-full">
+
+    <div class="max-md:hidden absolute rounded-l bg-black w-1.5 h-20 -left-1.5 top-36"></div>
+    <div class="max-md:hidden absolute rounded-l bg-black w-1.5 h-20 -left-1.5 top-60"></div>
+    <div class="max-md:hidden absolute rounded-r bg-black w-1.5 h-28 -right-1.5 top-44"></div>
+    <div
+      class="relative md:pt-5 bg-white md:border-[9px] md:border-black md:rounded-[50px] overflow-hidden w-full h-full ">
+      <img
+        class="absolute w-full h-full top-0 left-0 object-cover opacity-55"
+        src="assets/images/Sfondo.jpg"
+      >
+      <div class="w-full relative h-full overflow-hidden flex flex-col items-center gap-5">
+        <p class="text-3xl font-bold p-2">CLASSIFICA</p>
+        <div class="relative flex w-1/2 border border-gray-50 rounded-2xl p-0.5">
+          <div class="w-1/2 duration-300 transition-all text-center h-full rounded-2xl"
+               (click)="selectedLeaderboard = Leaderboard.fromScores(scores['global'])"
+               [class]="{'bg-gray-50/80': selectedLeaderboard}"
+          >
+            Globale
+          </div>
+          <div class="w-1/2 duration-300 transition-all text-center h-full rounded-2xl"
+               (click)="selectedLeaderboard = null"
+               [class]="{'bg-gray-50/80': !selectedLeaderboard}"
+          >
+            Giochi
+          </div>
+        </div>
+
+        @if (selectedLeaderboard) {
+          <single-leaderboard
+
+            class="w-full h-full"
+            [leaderboard]="selectedLeaderboard"
+          ></single-leaderboard>
+        } @else {
+          <div class="flex-col flex gap-1 w-full overflow-scroll">
+            @for (game of games; track game) {
+              <div class=" w-full rounded-2xl p-5"
+                   (click)="checkbox.checked = !checkbox.checked"
+                   [style]="{'background-image': 'linear-gradient(to right, ' + colors[Leaderboard.fromScores(gameScores[game]).getWinner().player]  + ', transparent 95%'} "
+              >
+                <input type="checkbox" class="hidden" #checkbox>
+                {{ game }}
+                @if (checkbox.checked) {
+                  <div class="flex justify-between w-full">
+                    @for (participant of Leaderboard.fromScores(gameScores[game]).getSortedParticipants(); track participant; let index = $index) {
+                      <div class="flex flex-col items-center justify-center">
+                        <span>{{ index + 1 }}°</span>
+                        <span>{{ participant.player }}</span>
+                      </div>
+                    }
+                  </div>
+                }
+              </div>
+            }
+
+          </div>
+
+        }
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+

@@ -1,0 +1,66 @@
+<img
+  class="fixed w-full h-full top-0 left-0 -z-10  object-cover opacity-35"
+  src="assets/images/dddepth-342.jpg"
+>
+<div class="xl:hidden">
+  <div class="h-full w-full relative flex flex-col scroll-smooth overflow-scroll justify-start gap-2 items-center"
+  >
+
+    <div class="w-full h-5/6 flex-col flex rounded-b-3xl bg-gray-300/60 backdrop-blur"
+    >
+      <div class="mt-5">
+        <p class="text-4xl text-center flex flex-col justify-start items-center h-full w-full">
+          Palio dei borghi<br> <span class="font-bold">2024</span></p>
+
+      </div>
+
+      <div class=" items-center w-full justify-start">
+        <div class="flex gap-4 w-full p-5 pl-10 overflow-scroll "
+        >
+
+          <div
+            *ngFor="let component of components"
+            class="rounded-2xl bg-sky-100/80  flex flex-col items-center justify-start pt-3 w-72 h-96 gap-3"
+          >
+            <div class="w-72"></div>
+            <ng-container *ngComponentOutlet="
+              component.component;
+              inputs: component.data;
+        "/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-96 mt-10 ">
+      <div class="h-96 mt-20 bg-sky-900">
+        zaoooo
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="max-xl:hidden p-20 h-full w-full">
+  <div class=" rounded-3xl bg-white/50 h-3/5 w-full flex justify-around
+   p-10">
+    <div class="flex flex-col items-center justify-around">
+      <h1 class="text-5xl font-bold">{{ currentLeader.name }}</h1>
+      <img
+        class="object-contain h-3/5"
+        src="assets/images/{{currentLeader.image}}"
+       alt="winner"/>
+    </div>
+    <div class="flex w-1/3 flex-col">
+
+      <span class="text-3xl font-bold">Punti Totali: {{ currentLeader.points }}</span>
+      <div class="flex flex-col gap-2 overflow-scroll">
+        <div *ngFor="let game of currentLeader.gameScores" class="flex justify-between w-full p-5 bg-sky-800/30 rounded-3xl ">
+          <span class="text-2xl">{{ game.game }}</span>
+          <span class="text-2xl">Posizione: {{ game.rank }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

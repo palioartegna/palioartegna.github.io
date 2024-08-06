@@ -1,0 +1,45 @@
+<div (keydown.escape)="inputFocus = false; $event.stopPropagation()" class="m-0.5 w-full">
+  <div class="relative flex w-full items-center">
+    <span class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5">
+<!--      <fa-icon icon="list-check" class="text-gray-400"></fa-icon>-->
+    </span>
+    <input
+      #input
+      (focusin)="inputFocus = true"
+      [(ngModel)]="term"
+      [disabled]="disabled"
+      [readOnly]="readonly"
+      class="placeholder:text-grey-600 block h-12 w-full cursor-pointer rounded-2xl border border-slate-300 bg-white py-2 pl-9 pr-3 shadow-sm outline-none"
+      placeholder="{{ placeholder }}"
+      readonly
+      type="text"
+    />
+    <div #suffix class="absolute right-[5px]">
+      <ng-content select="suffix"></ng-content>
+    </div>
+  </div>
+  <div
+    *ngIf="inputFocus && items && items!.length > 0"
+    [style.height]="(items.length < 4 ? items.length : 4) * input.offsetHeight + 'px'"
+    class="bg-base-100 absolute z-10 mt-1 h-40 w-60 overflow-scroll rounded-2xl bg-white shadow"
+  >
+    <div *ngFor="let item of items" [style.height.px]="input.offsetHeight">
+      <div
+        [class.bg-slate-300]="multiple ? selected?.includes(item) : item === selected"
+        class="flex h-full w-full flex-col items-start justify-center p-3 hover:bg-gray-50"
+      >
+        <label class="label flex w-full cursor-pointer items-center justify-start gap-2 font-semibold text-gray-600">
+          <input
+            (click)="$event.stopPropagation(); selectItem(item); inputFocus = multiple"
+            *ngIf="multiple"
+            [checked]="selected?.includes(item) ? 'checked' : ''"
+            class="focus:bg-primary accent-primary_600 focus:accent-primary_600 h-5 w-5 rounded-full border-gray-50"
+            checked
+            type="checkbox"
+          />
+          <span class="">{{ transform.callbackFn(item) }}</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

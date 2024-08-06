@@ -1,0 +1,113 @@
+<label class="mb-2 mt-2 block font-bold text-gray-600"> Ora </label>
+<div class="relative max-w-sm">
+   <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
+      <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5">
+<!--         <fa-icon class="text-gray-400" icon="clock"></fa-icon>-->
+        icon
+      </div>
+   </div>
+   <input
+      #selectTimeInput
+      class="m-0.5 block h-12 w-full cursor-pointer rounded-2xl border border-gray-300 bg-white p-2.5 ps-10 text-gray-900 outline-none"
+      placeholder="Select time"
+      type="text"
+      [disabled]="disabled"
+      (click)="currentStep = inputFocus ? currentStep : 'hours'; inputFocus = true"
+      value="{{ time | pbDate: 'HH:mm' }} - {{ duration }} minuti"
+   />
+</div>
+<div
+   #panel
+   (click)="inputFocus = true"
+   *ngIf="inputFocus && !disabled"
+   class="absolute z-[100] mt-2 flex w-[35rem] flex-col items-center justify-center overflow-hidden rounded-lg bg-white p-5 shadow"
+   tabindex="0"
+>
+   <div class="flex w-full justify-between">
+      <ng-container [ngSwitch]="currentStep">
+         <div class="flex w-1/2 justify-center">
+            <div *ngSwitchCase="'hours'">
+               <div class="bg-primary_50 relative h-64 w-64 items-center rounded-full">
+                  <div
+                     class="bg-primary_300 absolute z-10 h-3 w-3 rounded-full"
+                     style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+                  ></div>
+
+                  <div class="absolute inset-0 flex -translate-x-3 -translate-y-3 items-center justify-center">
+                     <div (click)="nextStep('minutes'); $event.stopPropagation()">
+                        <button
+                           *ngFor="let hour of [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]; let i = index"
+                           class="focus:bg-primary_300 hover:bg-primary_300 absolute flex h-6 w-6 cursor-pointer justify-center rounded-full text-lg font-bold text-gray-600 hover:text-white focus:rounded-full focus:text-white"
+                           [style.transform]="'rotate(' + i * 30 + 'deg) translate(0, -109px) rotate(' + -i * 30 + 'deg)'"
+                           (click)="selectedHourClick(hour)"
+                        >
+                           {{ hour }}
+                        </button>
+                        <button
+                           *ngFor="let hour of [0, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]; let i = index"
+                           class="focus:bg-primary_300 hover:bg-primary_300 absolute flex h-6 w-6 cursor-pointer justify-center rounded-full text-lg font-bold text-gray-600 hover:text-white focus:rounded-full focus:text-white"
+                           [style.transform]="'rotate(' + i * 30 + 'deg) translate(0, -70px) rotate(' + -i * 30 + 'deg)'"
+                           (click)="selectedHourClick(hour)"
+                        >
+                           {{ hour === 0 ? '00' : hour }}
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div *ngSwitchCase="'minutes'">
+               <div class="bg-primary_50 relative h-64 w-64 items-center rounded-full">
+                  <div
+                     class="bg-primary_300 absolute z-10 h-3 w-3 rounded-full"
+                     style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+                  ></div>
+                  <div class="absolute inset-0 flex -translate-x-3 -translate-y-3 items-center justify-center">
+                     <div>
+                        <button
+                           *ngFor="let minute of [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]; let i = index"
+                           class="focus:bg-primary_300 hover:bg-primary_300 absolute flex h-6 w-6 cursor-pointer justify-center rounded-full text-lg font-bold text-gray-600 hover:text-white focus:rounded-full focus:text-white"
+                           [style.transform]="'rotate(' + i * 30 + 'deg) translate(0, -109px) rotate(' + -i * 30 + 'deg)'"
+                           (click)="selectedMinuteClick(minute)"
+                        >
+                           {{ minute === 0 ? '00' : minute }}
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="h-full w-1/2 flex-col items-center justify-center">
+            <label class="mb-2 flex justify-center text-gray-600">Seleziona l'ora</label>
+            <div class="mt-2 flex items-center justify-center">
+               <span class="cursor-pointer text-2xl font-bold text-gray-600" (click)="goToHours()">
+                  {{ time | pbDate: 'HH' }}
+               </span>
+               <span class="cursor-pointer text-2xl font-bold text-gray-600" (click)="goToMinutes()"> :{{ time | pbDate: 'mm' }} </span>
+            </div>
+            <label class="mt-5 flex justify-center text-gray-600">Seleziona durata</label>
+            <div class="flex w-full items-center justify-center space-x-2 px-3">
+               <div class="relative w-full" (wheel)="handleWheel($event, 'selectedDuration')">
+                  <div class="flex items-center justify-center gap-x-1.5">
+                     <button class="h-16 w-12 bg-transparent text-center text-2xl text-gray-600 outline-none" (click)="decrementDuration()">
+                        down
+                     </button>
+                     <input
+                        class="h-16 w-12 bg-transparent text-center text-2xl text-gray-600 outline-none"
+                        type="text"
+                        [(ngModel)]="duration"
+                     />
+                     <button class="h-16 w-12 bg-transparent text-center text-2xl text-gray-600 outline-none" (click)="incrementDuration()">
+                        up
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="mt-5 flex justify-center">
+               <button type="button" class="btn btn-primary hover:bg-secondary_500 hover:text-white" (click)="confermaOra()">
+                  <span>Conferma</span>
+               </button>
+            </div>
+         </div>
+      </ng-container>
+   </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="fixed inset-0 z-[100] h-screen w-screen bg-gray-50 opacity-50" (click)="closeDialog()" (mousedown)="closeDialog()"></div>
+<dialog
+   open
+   [style]="{ filter: position === 'bottom' ? 'drop-shadow(0 -5px 25px rgb(0 0 0 / 0.3))' : 'drop-shadow(0 5px 25px rgb(0 0 0 / 0.3))' }"
+   class="animate-jump-in-small animate-duration-[300ms] fixed z-[1000] m-0 rounded-2xl p-0 outline-none"
+   #appDialog
+>
+   <div class="static" #content>
+      <ng-content></ng-content>
+   </div>
+</dialog>
