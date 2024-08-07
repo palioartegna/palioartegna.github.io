@@ -1,3 +1,3 @@
 // src/main.ts
-import("./chunk-CI6LVNJE.js").catch((err) => console.error(err));
+import("./chunk-WPH63NKF.js").catch((err) => console.error(err));
 //# sourceMappingURL=main.js.map

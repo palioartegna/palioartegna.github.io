@@ -20,22 +20,13 @@ let colors:any = {
 })
 export class LeaderboardsComponent implements OnInit{
 
-  selectedLeaderboard:Leaderboard|null = Leaderboard.fromScores(scores['global']);
-  // selectedLeaderboard:Leaderboard|null = null
   ngOnInit(): void {
-    for(let game of this.games){
-
-    }
   }
 
-  get gameScores () {return scores['game-scores'] as any}
-  games = Object.keys(this.gameScores);
-
-  tab = 'global'
 
 
   protected readonly scores = scores;
   protected readonly Leaderboard = Leaderboard;
-  protected readonly colors = colors;
+  public readonly colors = colors;
 }
 

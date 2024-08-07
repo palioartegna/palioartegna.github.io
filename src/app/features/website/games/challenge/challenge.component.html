@@ -1,0 +1,26 @@
+<div class="w-full relative h-full overflow-hidden flex flex-col items-center gap-5 p-2">
+  <p class="text-3xl font-bold p-2 text-center">{{ game.name }}</p>
+
+  <div class="flex flex-col w-full gap-1">
+
+    @for (participant of game.leaderboard.getSortedParticipants(); track participant; let index = $index) {
+      <div class="flex items-center justify-center p-2 rounded-2xl w-full"
+           [style]="{'background-color': colors[participant.player] } "
+      >
+        <span class="w-1/6 text-left text-xl">{{ index + 1 }}°</span>
+        <span class="w-2/6 text-left text-xl">{{ participant.player }}</span>
+        <span class="w-2/6 text-center text-xl">{{ game.scores[participant.player] }}</span>
+        <span class="w-1/6 text-3xl text-right material-icons-outlined drop-shadow text-black"
+
+              [class.text-yellow-500]="game['leaderboard'].getWinner().player === participant.player"
+              [class.text-gray-500]="game['leaderboard'].getTopThree()[1].player === participant.player"
+              [class.text-amber-700]="game['leaderboard'].getTopThree()[2].player === participant.player"
+        >
+          emoji_events
+        </span>
+      </div>
+    }
+
+
+  </div>
+</div>

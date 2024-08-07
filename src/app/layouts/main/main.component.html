@@ -1,34 +1,58 @@
-<div class="flex w-full duration-500 h-screen">
-  <div *ngIf="sideNavService.component"
-       class="relative transition-all
-       ease-in-out duration-300 z-10 h-full max-w-96"
-       [style]="!sideNavService.enabled ? 'width: 0px': 'width:90%;'"
-  >
+<div class="bg-gray-700 -z-10 fixed inset-0 w-full h-full">
+
+</div>
+
+
+<div class="flex w-full h-dvh shrink-0 items-center justify-center">
+
+  <div class="relative md:max-h-[800px] md:max-w-[390px] flex items-center justify-center w-full h-full">
+
+    <div class="max-md:hidden absolute rounded-l bg-black w-1.5 h-20 -left-1.5 top-36"></div>
+    <div class="max-md:hidden absolute rounded-l bg-black w-1.5 h-20 -left-1.5 top-60"></div>
+    <div class="max-md:hidden absolute rounded-r bg-black w-1.5 h-28 -right-1.5 top-44"></div>
+    <div class="max-md:hidden absolute rounded-b-xl bg-black w-32 h-5 z-10 top-2"></div>
+
     <div
-      [class.opacity-0]="!sideNavService.enabled"
-      [class.opacity-100]="sideNavService.enabled"
-      class="backdrop-blur transition-all duration-300 ease-in-out absolute -z-100 h-full w-full"
-    ></div>
-    <ng-container *ngComponentOutlet="
+      class="relative bg-white md:border-[9px] md:border-black md:rounded-[50px] overflow-hidden w-full h-full ">
+      <img
+
+        class="absolute w-full h-full top-0 left-0 object-cover opacity-55"
+        src="assets/images/Sfondo.jpg"
+      >
+
+
+      <div class="relative flex w-full duration-500 h-full">
+        <div *ngIf="sideNavService.component"
+             class="relative transition-all
+       ease-in-out duration-300 z-[100] h-full max-w-96"
+             [style]="!sideNavService.enabled ? 'width: 0px': 'width:90%;'"
+        >
+          <div
+            [class.opacity-0]="!sideNavService.enabled"
+            [class.opacity-100]="sideNavService.enabled"
+            class="backdrop-blur transition-all duration-300 ease-in-out absolute -z-100 h-full w-full"
+          ></div>
+          <ng-container *ngComponentOutlet="
           sideNavService.component;
       "/>
 
-  </div>
+        </div>
 
-  <div class="fixed flex w-full h-full flex-col">
-    <div *ngIf="navbarService.component">
-      <ng-container *ngComponentOutlet="
-          navbarService.component;
-      "/>
+        <div class="absolute flex w-full h-full flex-col">
+
+
+          <div class="overflow-scroll h-full w-full md:pt-5">
+            <router-outlet></router-outlet>
+          </div>
+          <!--    <ng-container #footerContainerRef class="grow-0" pbHost></ng-container>-->
+        </div>
+      </div>
+      <div class="fixed right-1 top-1 z-[1000] flex flex-col gap-1">
+        <pb-toast [toast]="toast" (close)="toastService.removeToast($event)" *ngFor="let toast of toasts"></pb-toast>
+      </div>
+
     </div>
 
-
-    <div class="overflow-scroll h-full w-full">
-      <router-outlet></router-outlet>
-    </div>
-    <!--    <ng-container #footerContainerRef class="grow-0" pbHost></ng-container>-->
   </div>
 </div>
-<div class="fixed right-1 top-1 z-[1000] flex flex-col gap-1">
-  <pb-toast [toast]="toast" (close)="toastService.removeToast($event)" *ngFor="let toast of toasts"></pb-toast>
-</div>
+

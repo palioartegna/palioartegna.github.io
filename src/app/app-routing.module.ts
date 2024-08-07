@@ -17,7 +17,7 @@ import {LoginComponent} from "./login/login/login.component";
       {
         path: '',
         data: {
-          navbar: 'none',
+          // navbar: 'none',
         },
         loadChildren: () => import(`./features/features-routing.module`).then(m => m.FeaturesRoutingModule),
       },

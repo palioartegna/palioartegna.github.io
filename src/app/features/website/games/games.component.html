@@ -1,57 +1,33 @@
-<img
-  class="fixed w-full h-full top-0 left-0 -z-10  object-cover opacity-35"
-  src="assets/images/dddepth-342.jpg"
-  alt="">
+<div class="w-full relative h-full overflow-hidden flex flex-col items-center gap-5">
+  <p class="text-3xl font-bold p-2">GIOCHI</p>
+  <div class="flex-col flex gap-1 w-full overflow-scroll p-1">
+    @for (game of games; track game) {
+      <div class=" w-full rounded-2xl p-5 backdrop-blur drop-shadow focus:bg-white/80"
+           [routerLink]="['.', gameScores[game].type, game]"
+           [style]="{'background-image': 'linear-gradient(to right, ' +
+           (getLeaderboard(game)?colors[getLeaderboard(game)!.getWinner().player]: 'rgba(160, 160, 160, 0.5) 0%')
+           + ', transparent 100%'} "
+      >
+        <span class="flex justify-between">
+                {{ game }}
+          <span class="material-icons-outlined">keyboard_arrow_right</span>
+        </span>
 
-<div class="mt-10 w-full h-full flex flex-col gap-4 p-5">
-  <div
-    *ngFor="let game of games"
-    class="relative w-full h-full"
-    [class]="{'text-gray-400/50': !game.winner}"
+        @if (gameScores[game]['leaderboard']) {
+          <div class="flex items-end h-16 justify-between w-full mt-1 overflow-hidden "
+          >
+            @for (participant of Leaderboard.fromScores(gameScores[game]['leaderboard']).getSortedParticipants(); track participant; let index = $index) {
+              <div class="flex flex-col items-center justify-center"
 
-  >
-    <div class="absolute backdrop-blur h-full flex justify-end  p-2 w-full top-0 left-0 -z-10">
-
-      <img
-        *ngIf="game.winner"
-        class="h-full object-contain opacity-30"
-        src="assets/images/{{images[game.winner]}}"
-        alt="">
-
-    </div>
-
-    <div class="w-full
-     p-5 shadow flex flex-col items-center justify-start rounded-2xl"
-         [class]="{
-            'bg-gray-100/60': !game.winner,
-            'bg-yellow-300/60': game.winner === 'sottocastello',
-            'bg-red-500/60': game.winner === 'sornico',
-            'bg-green-500/60': game.winner === 'sottomonte',
-            'bg-blue-500/60': game.winner === 'salt',
-            'bg-black/30': game.winner === 'villa',
-          }"
-
-    >
-      <span class="text-xl">{{ game.name }}</span>
-      <div class="flex justify-between w-full">
-        <div class="flex gap-1 items-center">
-          <span class="material-icons-outlined">schedule</span>
-          <span>{{ game.date }}</span>
-        </div>
-        <div class="flex w-2/5 flex-col items-center justify-center">
-
-            <span
-              class="material-icons-outlined text-6xl"
-            >emoji_events</span>
-          <div *ngIf="game.winner">
-            {{ game.winner }}
+              >
+                <span>{{ index + 1 }}°</span>
+                <span>{{ participant.player }}</span>
+              </div>
+            }
           </div>
-        </div>
+        }
       </div>
-    </div>
+    }
 
   </div>
-
 </div>
-
-

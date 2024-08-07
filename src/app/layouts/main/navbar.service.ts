@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NavbarService {
   private _component: any = MainNavbarComponent;
-  private navbarToggleSubject = new BehaviorSubject<boolean>(false);
+  private navbarToggleSubject = new BehaviorSubject<boolean>(true);
 
   constructor(
     private router: Router,
