@@ -1,7 +1,7 @@
 import {
   Leaderboard,
   scores_exports
-} from "./chunk-CRMWHORZ.js";
+} from "./chunk-D5YZ7N4C.js";
 import {
   RouterModule,
   __spreadProps,
@@ -141,7 +141,7 @@ _SingleLeaderboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineCompon
 }, dependencies: [DecorateParticipantsPipe] });
 var SingleLeaderboardComponent = _SingleLeaderboardComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(SingleLeaderboardComponent, { className: "SingleLeaderboardComponent" });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(SingleLeaderboardComponent, { className: "SingleLeaderboardComponent", filePath: "src/app/features/website/leaderboards/single-leaderboard/single-leaderboard.component.ts", lineNumber: 36 });
 })();
 
 // src/app/features/website/leaderboards/leaderboards.component.ts
@@ -179,7 +179,7 @@ _LeaderboardsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
 }, dependencies: [SingleLeaderboardComponent] });
 var LeaderboardsComponent = _LeaderboardsComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(LeaderboardsComponent, { className: "LeaderboardsComponent" });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(LeaderboardsComponent, { className: "LeaderboardsComponent", filePath: "src/app/features/website/leaderboards/leaderboards.component.ts", lineNumber: 21 });
 })();
 
 // src/app/features/website/website-routing.module.ts
@@ -193,7 +193,7 @@ var routes = [
   },
   {
     path: "games",
-    loadChildren: () => import("./chunk-JC7I2GKO.js").then((m) => m.GamesRoutingModule)
+    loadChildren: () => import("./chunk-I4O33N7J.js").then((m) => m.GamesRoutingModule)
   },
   {
     path: "leaderboard",

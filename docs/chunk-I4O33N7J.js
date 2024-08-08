@@ -2,7 +2,7 @@ import {
   Leaderboard,
   "game-scores" as game_scores,
   scores_exports
-} from "./chunk-CRMWHORZ.js";
+} from "./chunk-D5YZ7N4C.js";
 import {
   ActivatedRoute,
   RouterLink,
@@ -131,7 +131,7 @@ _GamesComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: 
 }, dependencies: [RouterLink] });
 var GamesComponent = _GamesComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(GamesComponent, { className: "GamesComponent" });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(GamesComponent, { className: "GamesComponent", filePath: "src/app/features/website/games/games.component.ts", lineNumber: 17 });
 })();
 
 // src/app/features/website/games/tournament/tournament.component.ts
@@ -240,7 +240,7 @@ _TournamentComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ t
 } });
 var TournamentComponent = _TournamentComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TournamentComponent, { className: "TournamentComponent" });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TournamentComponent, { className: "TournamentComponent", filePath: "src/app/features/website/games/tournament/tournament.component.ts", lineNumber: 29 });
 })();
 
 // src/app/features/website/games/challenge/challenge.component.ts
@@ -317,7 +317,7 @@ _ChallengeComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
 } });
 var ChallengeComponent = _ChallengeComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChallengeComponent, { className: "ChallengeComponent" });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChallengeComponent, { className: "ChallengeComponent", filePath: "src/app/features/website/games/challenge/challenge.component.ts", lineNumber: 30 });
 })();
 
 // src/app/features/website/games/games-routing.module.ts
