@@ -1,7 +1,7 @@
 import {
   Leaderboard,
   scores_exports
-} from "./chunk-D5YZ7N4C.js";
+} from "./chunk-7GQH6CRG.js";
 import {
   RouterModule,
   __spreadProps,
@@ -193,7 +193,7 @@ var routes = [
   },
   {
     path: "games",
-    loadChildren: () => import("./chunk-I4O33N7J.js").then((m) => m.GamesRoutingModule)
+    loadChildren: () => import("./chunk-HFFIKPWU.js").then((m) => m.GamesRoutingModule)
   },
   {
     path: "leaderboard",
