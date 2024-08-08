@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/features/features-routing.module.ts"],
+  "sourcesContent": ["import {RouterModule, Routes} from '@angular/router';\nimport {NgModule} from \"@angular/core\";\nimport {HomeComponent} from \"./website/home/home.component\";\n\nexport const routes: Routes = [\n  {\n    path: '',\n    loadChildren: () => import(`./website/website-routing.module`).then(m => m.WebsiteRoutingModule),\n\n  }\n];\n\n\n@NgModule({\n  imports: [\n    RouterModule.forChild(routes),\n  ],\n  exports: [RouterModule],\n})\nexport class FeaturesRoutingModule{}\n"],
+  "mappings": ";;;;;;;AAIO,IAAM,SAAiB;EAC5B;IACE,MAAM;IACN,cAAc,MAAM,OAAO,qBAAkC,EAAE,KAAK,OAAK,EAAE,oBAAoB;;;AAY7F,IAAO,yBAAP,MAAO,uBAAqB;;;mBAArB,wBAAqB;AAAA;sFAArB,uBAAqB,CAAA;0FAJ9B,aAAa,SAAS,MAAM,GAEpB,YAAY,EAAA,CAAA;AAElB,IAAO,wBAAP;",
+  "names": []
+}
