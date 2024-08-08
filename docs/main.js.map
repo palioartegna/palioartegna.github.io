@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/main.ts"],
-  "sourcesContent": ["import('./bootstrap').catch(err => console.error(err));\n"],
-  "mappings": ";AAAA,OAAO,qBAAa,EAAE,MAAM,SAAO,QAAQ,MAAM,GAAG,CAAC;",
-  "names": []
-}
