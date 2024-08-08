@@ -2,7 +2,7 @@
 
 # Function to update the website
 update_website() {
-    ng build --base-href https://palioartegna.github.io/
+    /home/ubuntu/.nvm/versions/node/v18.20.1/bin/ng build --base-href https://palioartegna.github.io/
     git add .
     git commit -m "Update scores"
     git push
