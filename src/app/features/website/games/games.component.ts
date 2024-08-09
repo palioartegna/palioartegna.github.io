@@ -23,7 +23,7 @@ export class GamesComponent {
   }
 
   get gameScores () {return scores['game-scores'] as any}
-  games = Object.keys(this.gameScores);
+  games = Object.keys(this.gameScores).reverse();
 
   tab = 'global'
 

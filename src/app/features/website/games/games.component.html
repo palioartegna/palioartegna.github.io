@@ -1,27 +1,25 @@
 <div class="w-full relative h-full overflow-hidden flex flex-col items-center gap-5">
   <p class="text-3xl font-bold p-2">GIOCHI</p>
-  <div class="flex-col flex gap-1 w-full overflow-scroll p-1">
+  <div class="flex-col flex gap-2 w-full overflow-scroll drop-shadow-xl p-5">
     @for (game of games; track game) {
-      <div class=" w-full rounded-2xl p-5 backdrop-blur drop-shadow focus:bg-white/80"
+      <div class=" w-full rounded-2xl px-2 py-1 backdrop-blur drop-shadow-xl focus:bg-white/80"
            [routerLink]="['.', gameScores[game].type, game]"
            [style]="{'background-image': 'linear-gradient(to right, ' +
            (getLeaderboard(game)?colors[getLeaderboard(game)!.getWinner().player]: 'rgba(160, 160, 160, 0.5) 0%')
            + ', transparent 100%'} "
       >
-        <span class="flex justify-between">
-                {{ game }}
+        <span class="flex justify-between ">
+          <span class="font-bold">{{ game }}</span>
           <span class="material-icons-outlined">keyboard_arrow_right</span>
         </span>
 
         @if (gameScores[game]['leaderboard']) {
-          <div class="flex items-end h-16 justify-between w-full mt-1 overflow-hidden "
+          <div class="flex items-end h-12 justify-between w-11/12  overflow-hidden "
           >
             @for (participant of Leaderboard.fromScores(gameScores[game]['leaderboard']).getSortedParticipants(); track participant; let index = $index) {
-              <div class="flex flex-col items-center justify-center"
-
-              >
+              <div class="flex flex-col items-center justify-center">
                 <span>{{ index + 1 }}°</span>
-                <span>{{ participant.player }}</span>
+                <span class="overflow-hidden text-ellipsis">{{ participant.player }}</span>
               </div>
             }
           </div>

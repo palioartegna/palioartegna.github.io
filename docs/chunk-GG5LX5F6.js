@@ -2,7 +2,7 @@ import {
   Leaderboard,
   "game-scores" as game_scores,
   scores_exports
-} from "./chunk-OPGMY5OU.js";
+} from "./chunk-UR5CM62F.js";
 import {
   ActivatedRoute,
   RouterLink,
@@ -30,7 +30,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1
-} from "./chunk-YMSUI2PT.js";
+} from "./chunk-EYNZP2UF.js";
 
 // src/app/utils.ts
 var colors = {
@@ -42,12 +42,12 @@ var colors = {
 };
 
 // src/app/features/website/games/games.component.ts
-function GamesComponent_For_5_Conditional_5_For_2_Template(rf, ctx) {
+function GamesComponent_For_5_Conditional_6_For_2_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 8)(1, "span");
+    \u0275\u0275elementStart(0, "div", 9)(1, "span");
     \u0275\u0275text(2);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "span");
+    \u0275\u0275elementStart(3, "span", 10);
     \u0275\u0275text(4);
     \u0275\u0275elementEnd()();
   }
@@ -60,10 +60,10 @@ function GamesComponent_For_5_Conditional_5_For_2_Template(rf, ctx) {
     \u0275\u0275textInterpolate(participant_r8.player);
   }
 }
-function GamesComponent_For_5_Conditional_5_Template(rf, ctx) {
+function GamesComponent_For_5_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 7);
-    \u0275\u0275repeaterCreate(1, GamesComponent_For_5_Conditional_5_For_2_Template, 5, 2, "div", 9, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275elementStart(0, "div", 8);
+    \u0275\u0275repeaterCreate(1, GamesComponent_For_5_Conditional_6_For_2_Template, 5, 2, "div", 11, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -77,12 +77,13 @@ var _c0 = (a0) => ({ "background-image": a0 });
 var _c1 = (a1, a2) => [".", a1, a2];
 function GamesComponent_For_5_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 3)(1, "span", 4);
-    \u0275\u0275text(2);
-    \u0275\u0275elementStart(3, "span", 5);
-    \u0275\u0275text(4, "keyboard_arrow_right");
+    \u0275\u0275elementStart(0, "div", 3)(1, "span", 4)(2, "span", 5);
+    \u0275\u0275text(3);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(4, "span", 6);
+    \u0275\u0275text(5, "keyboard_arrow_right");
     \u0275\u0275elementEnd()();
-    \u0275\u0275template(5, GamesComponent_For_5_Conditional_5_Template, 3, 0, "div", 6);
+    \u0275\u0275template(6, GamesComponent_For_5_Conditional_6_Template, 3, 0, "div", 7);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -90,15 +91,15 @@ function GamesComponent_For_5_Template(rf, ctx) {
     const ctx_r0 = \u0275\u0275nextContext();
     \u0275\u0275styleMap(\u0275\u0275pureFunction1(5, _c0, "linear-gradient(to right, " + (ctx_r0.getLeaderboard(game_r1) ? ctx_r0.colors[ctx_r0.getLeaderboard(game_r1).getWinner().player] : "rgba(160, 160, 160, 0.5) 0%") + ", transparent 100%"));
     \u0275\u0275property("routerLink", \u0275\u0275pureFunction2(7, _c1, ctx_r0.gameScores[game_r1].type, game_r1));
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1(" ", game_r1, " ");
     \u0275\u0275advance(3);
-    \u0275\u0275conditional(5, ctx_r0.gameScores[game_r1]["leaderboard"] ? 5 : -1);
+    \u0275\u0275textInterpolate(game_r1);
+    \u0275\u0275advance(3);
+    \u0275\u0275conditional(6, ctx_r0.gameScores[game_r1]["leaderboard"] ? 6 : -1);
   }
 }
 var _GamesComponent = class _GamesComponent {
   constructor() {
-    this.games = Object.keys(this.gameScores);
+    this.games = Object.keys(this.gameScores).reverse();
     this.tab = "global";
     this.Leaderboard = Leaderboard;
     this.colors = colors;
@@ -115,13 +116,13 @@ var _GamesComponent = class _GamesComponent {
 _GamesComponent.\u0275fac = function GamesComponent_Factory(t) {
   return new (t || _GamesComponent)();
 };
-_GamesComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _GamesComponent, selectors: [["app-games"]], decls: 6, vars: 0, consts: [[1, "w-full", "relative", "h-full", "overflow-hidden", "flex", "flex-col", "items-center", "gap-5"], [1, "text-3xl", "font-bold", "p-2"], [1, "flex-col", "flex", "gap-1", "w-full", "overflow-scroll", "p-1"], [1, "w-full", "rounded-2xl", "p-5", "backdrop-blur", "drop-shadow", "focus:bg-white/80", 3, "routerLink"], [1, "flex", "justify-between"], [1, "material-icons-outlined"], ["class", "flex items-end h-16 justify-between w-full mt-1 overflow-hidden "], [1, "flex", "items-end", "h-16", "justify-between", "w-full", "mt-1", "overflow-hidden"], [1, "flex", "flex-col", "items-center", "justify-center"], ["class", "flex flex-col items-center justify-center"], ["class", " w-full rounded-2xl p-5 backdrop-blur drop-shadow focus:bg-white/80", 3, "routerLink", "style"]], template: function GamesComponent_Template(rf, ctx) {
+_GamesComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _GamesComponent, selectors: [["app-games"]], decls: 6, vars: 0, consts: [[1, "w-full", "relative", "h-full", "overflow-hidden", "flex", "flex-col", "items-center", "gap-5"], [1, "text-3xl", "font-bold", "p-2"], [1, "flex-col", "flex", "gap-2", "w-full", "overflow-scroll", "drop-shadow-xl", "p-5"], [1, "w-full", "rounded-2xl", "px-2", "py-1", "backdrop-blur", "drop-shadow-xl", "focus:bg-white/80", 3, "routerLink"], [1, "flex", "justify-between"], [1, "font-bold"], [1, "material-icons-outlined"], ["class", "flex items-end h-12 justify-between w-11/12  overflow-hidden "], [1, "flex", "items-end", "h-12", "justify-between", "w-11/12", "overflow-hidden"], [1, "flex", "flex-col", "items-center", "justify-center"], [1, "overflow-hidden", "text-ellipsis"], ["class", "flex flex-col items-center justify-center"], ["class", " w-full rounded-2xl px-2 py-1 backdrop-blur drop-shadow-xl focus:bg-white/80", 3, "routerLink", "style"]], template: function GamesComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0)(1, "p", 1);
     \u0275\u0275text(2, "GIOCHI");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(3, "div", 2);
-    \u0275\u0275repeaterCreate(4, GamesComponent_For_5_Template, 6, 10, "div", 10, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275repeaterCreate(4, GamesComponent_For_5_Template, 7, 10, "div", 12, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -131,7 +132,7 @@ _GamesComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: 
 }, dependencies: [RouterLink] });
 var GamesComponent = _GamesComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(GamesComponent, { className: "GamesComponent", filePath: "src/app/features/website/games/games.component.ts", lineNumber: 17 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(GamesComponent, { className: "GamesComponent" });
 })();
 
 // src/app/features/website/games/tournament/tournament.component.ts
@@ -240,7 +241,7 @@ _TournamentComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ t
 } });
 var TournamentComponent = _TournamentComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TournamentComponent, { className: "TournamentComponent", filePath: "src/app/features/website/games/tournament/tournament.component.ts", lineNumber: 29 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(TournamentComponent, { className: "TournamentComponent" });
 })();
 
 // src/app/features/website/games/challenge/challenge.component.ts
@@ -317,7 +318,7 @@ _ChallengeComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
 } });
 var ChallengeComponent = _ChallengeComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChallengeComponent, { className: "ChallengeComponent", filePath: "src/app/features/website/games/challenge/challenge.component.ts", lineNumber: 30 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ChallengeComponent, { className: "ChallengeComponent" });
 })();
 
 // src/app/features/website/games/games-routing.module.ts

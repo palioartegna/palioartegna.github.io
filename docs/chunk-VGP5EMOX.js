@@ -2,13 +2,13 @@ import {
   RouterModule,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-YMSUI2PT.js";
+} from "./chunk-EYNZP2UF.js";
 
 // src/app/features/features-routing.module.ts
 var routes = [
   {
     path: "",
-    loadChildren: () => import("./chunk-IGYF5U5G.js").then((m) => m.WebsiteRoutingModule)
+    loadChildren: () => import("./chunk-RQV6EXY2.js").then((m) => m.WebsiteRoutingModule)
   }
 ];
 var _FeaturesRoutingModule = class _FeaturesRoutingModule {

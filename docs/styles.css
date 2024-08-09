@@ -879,6 +879,9 @@ video {
 .gap-5 {
   gap: 1.25rem;
 }
+.gap-7 {
+  gap: 1.75rem;
+}
 .gap-x-1 {
   column-gap: 0.25rem;
 }
@@ -911,6 +914,9 @@ video {
 }
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+.text-ellipsis {
+  text-overflow: ellipsis;
 }
 .text-nowrap {
   text-wrap: nowrap;
@@ -1032,6 +1038,10 @@ video {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 .bg-gray-300\/20 {
   background-color: rgb(209 213 219 / 0.2);
@@ -1397,6 +1407,10 @@ video {
 }
 .drop-shadow-2xl {
   --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.drop-shadow-xl {
+  --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter {

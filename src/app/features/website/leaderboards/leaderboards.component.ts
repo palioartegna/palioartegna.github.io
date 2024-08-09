@@ -12,6 +12,7 @@ let colors:any = {
   "Surnins": "rgba(255,0,0,0.50)",
 }
 
+
 @Component({
   selector: 'app-leaderboard',
 
@@ -20,6 +21,7 @@ let colors:any = {
 })
 export class LeaderboardsComponent implements OnInit{
 
+  mainLeaderboard: Leaderboard = new Leaderboard((<any>scores)['global'])
   ngOnInit(): void {
   }
 

@@ -1,11 +1,45 @@
-<div class="w-full relative h-full overflow-hidden flex flex-col items-center gap-5">
-  <p class="text-3xl font-bold p-2">CLASSIFICA</p>
+<div class="w-full relative h-full overflow-scroll flex flex-col items-start  gap-7 p-5">
 
-  <single-leaderboard
 
-    class="w-full h-full"
-    [leaderboard]="Leaderboard.fromScores(scores['global'])"
-  ></single-leaderboard>
+  <p class="text-3xl w-full font-bold p-2 text-center">PALIO 2024</p>
+
+  <!--  <single-leaderboard-->
+
+  <!--    class="w-full h-full"-->
+  <!--    [leaderboard]="Leaderboard.fromScores(scores['global'])"-->
+  <!--  ></single-leaderboard>-->
+
+
+  <div class="flex flex-col gap-1 w-full drop-shadow-xl">
+    <p class="text-xl font-bold p-2">CLASSIFICA ATTUALE</p>
+    <div
+      class="flex justify-between drop-shadow-xl rounded-2xl backdrop-blur bg-white/30 items-center px-5 py-2  w-full"
+    >
+      <span class="grow ">Borgo</span>
+      <span class="w-1/5">Punti</span>
+      <span class="w-1/5 text-center">Gap</span>
+      <span class="w-1/5 text-right">n°</span>
+
+    </div>
+    @for (participant of mainLeaderboard.getSortedParticipants(); track participant; let index = $index) {
+      <div class="flex justify-between drop-shadow-xl rounded-2xl  items-center p-5 w-full"
+           [style]="{'background-color': colors[participant.player]} "
+
+      >
+        <span class="grow ">{{ participant.player }}</span>
+        <span class="w-1/5">{{ participant.points }}</span>
+        <span class="w-1/5 text-center">{{ (participant.points - mainLeaderboard.getWinner().points) ?? '' }}</span>
+        <span class="w-1/5 text-right">{{ index + 1 }}°</span>
+
+      </div>
+    }
+  </div>
+  <div class="w-full mt-5 flex flex-col gap-1">
+    <hr class="w-full bg-black border-gray-300"/>
+    <div class="bg-gray-300 backdrop-blur drop-shadow-xl rounded-2xl p-2"
+         [routerLink]="'/games'"
+    >Vai ai singoli giochi
+    </div>
+  </div>
 </div>
-
 

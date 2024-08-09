@@ -1,6 +1,6 @@
 import {
   __export
-} from "./chunk-YMSUI2PT.js";
+} from "./chunk-EYNZP2UF.js";
 
 // src/assets/data/scores.json
 var scores_exports = {};
@@ -34,6 +34,7 @@ var Leaderboard = class _Leaderboard {
 
 export {
   scores_exports,
+  global,
   game_scores as "game-scores",
   Leaderboard
 };
