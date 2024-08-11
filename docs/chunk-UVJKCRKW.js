@@ -2,7 +2,7 @@ import {
   Leaderboard,
   global,
   scores_exports
-} from "./chunk-IAZZJPCG.js";
+} from "./chunk-IQVZRGAL.js";
 import {
   RouterLink,
   RouterModule,
@@ -116,7 +116,7 @@ _LeaderboardsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
 }, dependencies: [RouterLink] });
 var LeaderboardsComponent = _LeaderboardsComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(LeaderboardsComponent, { className: "LeaderboardsComponent" });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(LeaderboardsComponent, { className: "LeaderboardsComponent", filePath: "src/app/features/website/leaderboards/leaderboards.component.ts", lineNumber: 22 });
 })();
 
 // src/app/features/website/website-routing.module.ts
@@ -130,7 +130,7 @@ var routes = [
   },
   {
     path: "games",
-    loadChildren: () => import("./chunk-EREPCBGW.js").then((m) => m.GamesRoutingModule)
+    loadChildren: () => import("./chunk-22IR2TTS.js").then((m) => m.GamesRoutingModule)
   },
   {
     path: "leaderboard",
