@@ -707,7 +707,7 @@ var game_scores = {
         ],
         scores: [
           "2",
-          "0"
+          "1"
         ]
       }
     ],
@@ -731,6 +731,101 @@ var game_scores = {
       {
         player: "Vile",
         points: 7
+      }
+    ]
+  },
+  Freccette: {
+    type: "tournament",
+    rounds: [
+      {
+        players: [
+          "Somont",
+          "Salt"
+        ],
+        scores: [
+          "1",
+          "3"
+        ]
+      },
+      {
+        players: [
+          "Salt",
+          "Sotcjiscjel"
+        ],
+        scores: [
+          "2",
+          "3"
+        ]
+      },
+      {
+        players: [
+          "Salt",
+          "Surnins"
+        ],
+        scores: [
+          "3",
+          "0"
+        ]
+      },
+      {
+        players: [
+          "Somont",
+          "Sotcjiscjiel"
+        ],
+        scores: [
+          "2",
+          "3"
+        ]
+      },
+      {
+        players: [
+          "Somont",
+          "Surnins"
+        ],
+        scores: [
+          "3",
+          "0"
+        ]
+      },
+      {
+        players: [
+          "Somont",
+          "Vile"
+        ],
+        scores: [
+          "0",
+          "3"
+        ]
+      },
+      {
+        players: [
+          "Sotcjiscjel",
+          "Surnins"
+        ],
+        scores: [
+          "3",
+          "0"
+        ]
+      },
+      {
+        players: [
+          "Sotcjiscjel",
+          "Vile"
+        ],
+        scores: [
+          "0",
+          "3"
+        ]
+      },
+      {
+        players: [
+          "Surnins",
+          "Vile"
+        ],
+        scores: [
+          "0",
+          "3"
+        ]
       }
     ]
   }
