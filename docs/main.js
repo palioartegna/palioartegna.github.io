@@ -1,2 +1,2 @@
 // src/main.ts
-import("./chunk-SVDDQYCA.js").catch((err) => console.error(err));
+import("./chunk-IBZNESK3.js").catch((err) => console.error(err));
