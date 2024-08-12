@@ -2,7 +2,7 @@ import {
   Leaderboard,
   global,
   scores_exports
-} from "./chunk-DNOIXWOT.js";
+} from "./chunk-FBO54VYU.js";
 import {
   RouterLink,
   RouterModule,
@@ -130,7 +130,7 @@ var routes = [
   },
   {
     path: "games",
-    loadChildren: () => import("./chunk-VTZR3AMT.js").then((m) => m.GamesRoutingModule)
+    loadChildren: () => import("./chunk-V3NITFKF.js").then((m) => m.GamesRoutingModule)
   },
   {
     path: "leaderboard",
