@@ -1,2 +1,2 @@
 // src/main.ts
-import("./chunk-MVLTRKGV.js").catch((err) => console.error(err));
+import("./chunk-JPCILHOD.js").catch((err) => console.error(err));
