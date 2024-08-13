@@ -8,7 +8,7 @@ import {
 var routes = [
   {
     path: "",
-    loadChildren: () => import("./chunk-FVIAVVDF.js").then((m) => m.WebsiteRoutingModule)
+    loadChildren: () => import("./chunk-JMBEA5MM.js").then((m) => m.WebsiteRoutingModule)
   }
 ];
 var _FeaturesRoutingModule = class _FeaturesRoutingModule {
