@@ -2,7 +2,7 @@ import {
   Leaderboard,
   "game-scores" as game_scores,
   scores_exports
-} from "./chunk-M2HIKWMQ.js";
+} from "./chunk-2CKGTVY5.js";
 import {
   ActivatedRoute,
   RouterLink,
