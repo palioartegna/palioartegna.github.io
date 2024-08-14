@@ -12934,7 +12934,7 @@ _AppRoutingModule.\u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({ impor
     data: {
       // navbar: 'none',
     },
-    loadChildren: () => import("./chunk-XPCOM4YB.js").then((m) => m.FeaturesRoutingModule)
+    loadChildren: () => import("./chunk-PY7DG7ZB.js").then((m) => m.FeaturesRoutingModule)
   }
 ]), RouterModule] });
 var AppRoutingModule = _AppRoutingModule;
